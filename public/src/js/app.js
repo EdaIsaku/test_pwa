@@ -1,3 +1,10 @@
+//ask if promises are supported in browser
+if (!window.Promise) {
+  window.Promise = Promise;
+} else {
+  console.log(`Promise is supported in your browser, ${window.Promise}`);
+}
+
 const registerServiceWorker = async () => {
   if ("serviceWorker" in navigator) {
     try {
